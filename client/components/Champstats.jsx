@@ -3,7 +3,7 @@ import React from 'react'
 export default React.createClass({
   render(){
     return(
-      <div>
+      <div className="">
         <div className="champStats">
   				<div className="statPropColumn">
   					<p> HEALTH </p>

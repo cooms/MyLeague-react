@@ -7,9 +7,11 @@ export default React.createClass({
   render () {
     return (
       <div className="mainWrapper" id="jax">
-        <Champtitle/>
-        <Champstats/>
-        <Champbio/>
+        <div className="contentWrapper">
+          <Champtitle/>
+          <Champstats/>
+          <Champbio/>
+        </div>
       </div>
     )
   }

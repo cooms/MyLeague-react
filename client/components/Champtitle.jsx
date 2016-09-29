@@ -3,7 +3,7 @@ import React from 'react'
 export default React.createClass({
   render () {
     return (
-      <div>
+      <div className="">
         <div className="champName"> JAX </div>
   			<div className="champEpithet"> "Grandmaster at Arms" </div>
         <span className="lineBreak"></span>
