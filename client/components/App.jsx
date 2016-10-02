@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './Header.jsx'
 import Formbox from './Formbox.jsx'
+import Links from './Links.jsx'
 
 export default React.createClass({
   render() {
@@ -8,6 +9,7 @@ export default React.createClass({
       <div className="mainWrapper" id="main">
         <Header/>
         <Formbox/>
+        <Links/>
       </div>
     )
   }

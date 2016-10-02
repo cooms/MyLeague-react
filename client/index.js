@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <Router history={hashHistory}>
       <Route path='/' component={App}/>
-      <Route path='/myChamp' component={Championinfo}/>
+      <Route path='/champion/:name' component={Championinfo}/>
     </Router>,
     document.getElementById('app')
   )

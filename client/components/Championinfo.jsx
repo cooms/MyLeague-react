@@ -4,11 +4,14 @@ import Champstats from './Champstats.jsx'
 import Champbio from './Champbio.jsx'
 
 export default React.createClass({
+  getinitialState () {
+    
+  }
   render () {
     return (
       <div className="mainWrapper" id="jax">
         <div className="contentWrapper">
-          <Champtitle/>
+          <Champtitle name={this.props.params.name}/>
           <Champstats/>
           <Champbio/>
         </div>
