@@ -15,13 +15,12 @@ export default React.createClass({
     champapi.getChamp(this.renderResults)
   },
 
-  renderResults (err, champData) {
+  renderResults (err, champData, champImages) {
     console.log(champData.epiphet)
     this.setState({
       name: champData.name,
       epiphet: champData.epiphet,
       blurb: champData.blurb,
-      image: champData.image,
       hp: champData.stats.hp,
       hpRegen: champData.stats.hpRegen,
       mp: champData.stats.mp,
@@ -31,7 +30,8 @@ export default React.createClass({
       attackSpd: champData.stats.attackSpd,
       armor: champData.stats.armor,
       magicResist: champData.stats.magicResist,
-      moveSpeed: champData.stats.moveSpeed
+      moveSpeed: champData.stats.moveSpeed,
+      tallImage: champData.tallImage,
     })
   },
 
@@ -57,6 +57,7 @@ export default React.createClass({
           />
           <Champbio
             blurb={this.state.blurb}
+            tallImage={this.state.tallImage}
           />
         </div>
       </div>
