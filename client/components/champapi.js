@@ -6,20 +6,22 @@ export default {
 
 var mainURL = "http://ddragon.leagueoflegends.com/cdn/"
 var mainJSON = "6.20.1/data/en_US/champion.json"
-var imageJSON = "img/champion/loading/"
+var tallImageJSON = "img/champion/loading/"
+var splashImageJSON = "img/champion/splash/"
 
 function getChamp (cb) {
   request
     .get(mainURL + mainJSON)
     .end((err, res) => {
-      var expectedChamp = res.body.data.Aatrox
+      var expectedChamp = res.body.data.Teemo
       if(!err) {
         const champData = {
           epiphet: expectedChamp.title,
           blurb: expectedChamp.blurb,
           baseInfo: {
           },
-          tallImage: mainURL + imageJSON + expectedChamp.name + "_0.jpg",
+          tallImage: mainURL + tallImageJSON + expectedChamp.name + "_0.jpg",
+          splashImage: mainURL + splashImageJSON + expectedChamp.name + "_0.jpg",
           stats: {
             hp: expectedChamp.stats.hp,
             hpRegen: expectedChamp.stats.hpregen,

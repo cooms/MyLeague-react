@@ -15,7 +15,7 @@ export default React.createClass({
     champapi.getChamp(this.renderResults)
   },
 
-  renderResults (err, champData, champImages) {
+  renderResults (err, champData) {
     console.log(champData.epiphet)
     this.setState({
       name: champData.name,
@@ -32,12 +32,14 @@ export default React.createClass({
       magicResist: champData.stats.magicResist,
       moveSpeed: champData.stats.moveSpeed,
       tallImage: champData.tallImage,
+      splashImage: champData.splashIamge
     })
   },
 
   render () {
     return (
-      <div className="mainWrapper" id="jax">
+      <div className="mainWrapper"
+        id="jax">
         <div className="contentWrapper">
           <Champtitle
             name={this.props.params.name}
