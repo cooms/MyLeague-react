@@ -39,9 +39,25 @@ export default React.createClass({
     return (
       <div className="mainWrapper" id="jax">
         <div className="contentWrapper">
-          <Champtitle name={this.props.params.name} epiphet={this.state.epiphet}/>
-          <Champstats hp={this.state.hp} hpRegen={this.state.hpRegen} mp={this.state.mp} mpRegen={this.state.mpRegen} attackRange={this.state.attackRange} attackDmg={this.state.attackDmg} attackSpd={this.state.attackSpd} armor={this.state.armor} magicResist={this.state.magicResist} moveSpeed={this.state.moveSpeed} />
-          <Champbio blurb={this.state.blurb}/>
+          <Champtitle
+            name={this.props.params.name}
+            epiphet={this.state.epiphet}
+          />
+          <Champstats
+            hp={this.state.hp}
+            hpRegen={this.state.hpRegen}
+            mp={this.state.mp}
+            mpRegen={this.state.mpRegen}
+            attackRange={this.state.attackRange}
+            attackDmg={this.state.attackDmg}
+            attackSpd={this.state.attackSpd}
+            armor={this.state.armor}
+            magicResist={this.state.magicResist}
+            moveSpeed={this.state.moveSpeed}
+          />
+          <Champbio
+            blurb={this.state.blurb}
+          />
         </div>
       </div>
     )

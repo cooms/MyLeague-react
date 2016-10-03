@@ -12,7 +12,7 @@ function getChamp (cb) {
   request
     .get(mainURL + mainJSON)
     .end((err, res) => {
-      var expectedChamp = res.body.data.Jax
+      var expectedChamp = res.body.data.Zed
       if(!err) {
         const champData = {
           epiphet: expectedChamp.title,
