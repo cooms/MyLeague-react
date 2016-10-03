@@ -5,7 +5,7 @@ export default React.createClass({
     return (
       <div className="">
         <div className="champName"> {this.props.name} </div>
-  			<div className="champEpithet"> "Grandmaster at Arms" </div>
+  			<div className="champEpithet"> " {this.props.epiphet} " </div>
         <span className="lineBreak"></span>
       </div>
     )

@@ -13,11 +13,11 @@ export default React.createClass({
   					<p> MELEE </p>
   				</div>
   				<div className="statValColumn">
-  					<p> 593 </p>
-  					<p> 8.37 </p>
-  					<p> 339 </p>
-  					<p> 7.58 </p>
-  					<p> 125 </p>
+  					<p> {this.props.hp} </p>
+  					<p> {this.props.hpRegen} </p>
+  					<p> {this.props.mp} </p>
+  					<p> {this.props.mpRegen} </p>
+  					<p> {this.props.attackRange} </p>
   				</div>
   				<div className="statPropColumn">
   					<p> ATTACK DAMAGE </p>
@@ -27,11 +27,11 @@ export default React.createClass({
   					<p> MOVE SPEED </p>
   				</div>
   				<div className="statValColumn">
-  					<p> 62 </p>
-  					<p> 0.638 </p>
-  					<p> 27 </p>
-  					<p> 32.1 </p>
-  					<p> 350 </p>
+  					<p> {this.props.attackDmg} </p>
+  					<p> {this.props.attackSpd} </p>
+  					<p> {this.props.armor} </p>
+  					<p> {this.props.magicResist} </p>
+  					<p> {this.props.moveSpeed} </p>
   				</div>
   			</div>
         <span className="lineBreak"></span>

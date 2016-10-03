@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate-react-webpack",
+  "name": "MyLeague-React",
   "version": "0.1.0",
-  "description": "A webpack React starter",
+  "description": "MyLeague project built with webpack",
   "main": "server/server.js",
   "scripts": {
     "dev": "webpack-dev-server --content-base public/ --hot --inline",
@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "body-parser": "^1.15.1",
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "superagent": "^2.3.0"
   }
 }
