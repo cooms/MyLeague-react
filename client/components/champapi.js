@@ -1,27 +1,28 @@
 import request from 'superagent'
 
 export default {
-  getChamp: getChamp
+  getChamp: getChamp,
+  GetAllChamps: GetAllChamps
 }
 
 var mainURL = "http://ddragon.leagueoflegends.com/cdn/"
 var mainJSON = "6.20.1/data/en_US/champion.json"
-var tallImageJSON = "img/champion/loading/"
-var splashImageJSON = "img/champion/splash/"
+var tallImagePath = "img/champion/loading/"
+var splashImagePath = "img/champion/splash/"
 
 function getChamp (cb) {
   request
     .get(mainURL + mainJSON)
     .end((err, res) => {
-      var expectedChamp = res.body.data.Teemo
+      var expectedChamp = res.body.data.Jax
       if(!err) {
         const champData = {
           epiphet: expectedChamp.title,
           blurb: expectedChamp.blurb,
           baseInfo: {
           },
-          tallImage: mainURL + tallImageJSON + expectedChamp.name + "_0.jpg",
-          splashImage: mainURL + splashImageJSON + expectedChamp.name + "_0.jpg",
+          tallImage: mainURL + tallImagePath + expectedChamp.name + "_0.jpg",
+          splashImage: mainURL + splashImagePath + expectedChamp.name + "_0.jpg",
           stats: {
             hp: expectedChamp.stats.hp,
             hpRegen: expectedChamp.stats.hpregen,
@@ -41,4 +42,8 @@ function getChamp (cb) {
         cb(err)
       }
     })
+}
+
+function GetAllChamps (cb) {
+
 }

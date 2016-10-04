@@ -1,7 +1,7 @@
 import React from 'react'
-import Champtitle from './Champtitle.jsx'
-import Champstats from './Champstats.jsx'
-import Champbio from './Champbio.jsx'
+import Champtitle from './ChampTitle.jsx'
+import Champstats from './ChampStats.jsx'
+import Champbio from './ChampBio.jsx'
 import champapi from './champapi'
 
 export default React.createClass({
