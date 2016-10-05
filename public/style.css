@@ -129,7 +129,7 @@ body {
 .contentWrapper {
 	margin: 100px auto;
 	max-width: 960px;
-	height: auto;
+	height: 1090px;
 
 	border: 1px solid grey;
 	border-radius: 5px;
@@ -197,6 +197,37 @@ body {
 	max-width: 35%;
 	height: auto;
 	padding: 5px 10px 5px 10px;
+}
+
+
+.champListContainer {
+  width: 960px;
+  height: auto;
+  font-size: 1.6em;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.75);
+	padding: 0px 20px 0px 20px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin: 0px auto 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.champContainer {
+  color: white;
+  font-family: Raleway;
+  padding: 20px;
+  width: 120px;
+  height: auto;
+  text-align: center;
+}
+
+.link {
+  font-size: 1em;
+  margin-top: -5px;
+  color: white;
+  text-decoration: none;
 }
 
  /*Random*/

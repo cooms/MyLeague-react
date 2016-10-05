@@ -2,7 +2,7 @@ import React from 'react'
 import Champtitle from './ChampTitle.jsx'
 import Champstats from './ChampStats.jsx'
 import Champbio from './ChampBio.jsx'
-import champapi from './champapi'
+import ChampApi from './ChampApi'
 
 export default React.createClass({
   getInitialState () {
@@ -12,13 +12,13 @@ export default React.createClass({
   },
 
   componentDidMount () {
-    champapi.getChamp(this.renderResults)
+    ChampApi.getChamp(this.props.params.name, this.renderResults)
   },
 
   renderResults (err, champData) {
     console.log(champData.epiphet)
     this.setState({
-      name: champData.name,
+      name: champData.champName,
       epiphet: champData.epiphet,
       blurb: champData.blurb,
       hp: champData.stats.hp,
@@ -32,7 +32,8 @@ export default React.createClass({
       magicResist: champData.stats.magicResist,
       moveSpeed: champData.stats.moveSpeed,
       tallImage: champData.tallImage,
-      splashImage: champData.splashIamge
+      splashImage: champData.splashIamge,
+      profImage: champData.profImage
     })
   },
 
@@ -42,7 +43,7 @@ export default React.createClass({
         id="jax">
         <div className="contentWrapper">
           <Champtitle
-            name={this.props.params.name}
+            name={this.state.name}
             epiphet={this.state.epiphet}
           />
           <Champstats
