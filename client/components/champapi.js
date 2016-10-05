@@ -15,7 +15,7 @@ function getChamp (name, cb) {
   request
     .get(mainURL + mainJSON)
     .end((err, res) => {
-      var expectedChamp = res.body.data[name]
+      let expectedChamp = res.body.data[name]
       if(!err) {
         const champData = {
           champName: expectedChamp.name,
@@ -23,9 +23,9 @@ function getChamp (name, cb) {
           blurb: expectedChamp.blurb,
           baseInfo: {
           },
-          tallImage: mainURL + tallImagePath + expectedChamp.name + "_0.jpg",
-          splashImage: mainURL + splashImagePath + expectedChamp.name + "_0.jpg",
-          profImage: mainURL + profImagePath + expectedChamp.name + ".png",
+          tallImage: mainURL + tallImagePath + expectedChamp.id + "_0.jpg",
+          splashImage: mainURL + splashImagePath + expectedChamp.id + "_0.jpg",
+          profImage: mainURL + profImagePath + expectedChamp.image.full,
           stats: {
             hp: expectedChamp.stats.hp,
             hpRegen: expectedChamp.stats.hpregen,
@@ -49,16 +49,18 @@ function getChamp (name, cb) {
 
 function GetAllChamps (cb) {
   request
-    .get(main + mainJSON)
+    .get(mainURL + mainJSON)
     .end((err, res) => {
-      var expectedChamps = res.body.data
       if(!err) {
-        const allChampsData = {
-          champName: expectedChamps.name,
-          profImage: mainURL + profImagePath + expectedChamp.name + ".png"
-        }
-        console.log(allChampsData)
-        cb(null, allChampsData)
+        const champs = res.body.data
+        const nameAndImages = Object.keys(champs).map(prop => {
+          return {
+            name: champs[prop].name,
+            image: `${mainURL}${profImagePath}${champs[prop].image.full}`,
+            id: champs[prop].id
+          }
+        })
+        cb(null, nameAndImages)
       } else {
         cb(err)
       }
