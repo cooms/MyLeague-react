@@ -21,7 +21,15 @@ function getChamp (name, cb) {
           champName: expectedChamp.name,
           epiphet: expectedChamp.title,
           blurb: expectedChamp.blurb,
+          roles: {
+            role1: expectedChamp.tags[0],
+            role2: expectedChamp.tags[1]
+          },
           baseInfo: {
+            attack: expectedChamp.info.attack,
+            defense: expectedChamp.info.defense,
+            magic: expectedChamp.info.magic,
+            difficulty: expectedChamp.info.difficulty
           },
           tallImage: mainURL + tallImagePath + expectedChamp.id + "_0.jpg",
           splashImage: mainURL + splashImagePath + expectedChamp.id + "_0.jpg",

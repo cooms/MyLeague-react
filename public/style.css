@@ -211,13 +211,14 @@ body {
   border-radius: 5px;
   margin: 0px auto 100px;
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
 .champContainer {
   color: white;
   font-family: Raleway;
-  padding: 20px;
+  padding: 25px;
   width: 120px;
   height: auto;
   text-align: center;

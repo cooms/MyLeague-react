@@ -47,6 +47,8 @@ export default React.createClass({
             epiphet={this.state.epiphet}
           />
           <Champstats
+            attack={this.state.attack}
+            defense={this.state.defense}
             hp={this.state.hp}
             hpRegen={this.state.hpRegen}
             mp={this.state.mp}

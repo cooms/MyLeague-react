@@ -6,6 +6,7 @@ export default React.createClass({
       <div className="">
         <div className="champStats">
   				<div className="statPropColumn">
+            <p> {this.props.atimdefense} </p>
   					<p> HEALTH </p>
   					<p> HEALTH REGEN. </p>
   					<p> MANA </p>
