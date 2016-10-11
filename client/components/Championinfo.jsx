@@ -1,5 +1,6 @@
 import React from 'react'
 import Champtitle from './ChampTitle.jsx'
+import ChampStatBars from './ChampStatBars.jsx'
 import Champstats from './ChampStats.jsx'
 import Champbio from './ChampBio.jsx'
 import ChampApi from './ChampApi'
@@ -17,8 +18,11 @@ export default React.createClass({
   },
 
   renderResults (err, champData) {
-    console.log(champData.epiphet)
     this.setState({
+      attack: champData.baseInfo.attack,
+      defense: champData.baseInfo.defense,
+      magic: champData.baseInfo.magic,
+      difficulty: champData.baseInfo.difficulty,
       name: champData.champName,
       epiphet: champData.epiphet,
       blurb: champData.blurb,
@@ -47,9 +51,17 @@ export default React.createClass({
             name={this.state.name}
             epiphet={this.state.epiphet}
           />
+          <ChampStatBars
+            attack={this.state.attack}
+            defense={this.state.defense}
+            magic={this.state.magic}
+            difficulty={this.state.difficulty}
+          />
           <Champstats
             attack={this.state.attack}
             defense={this.state.defense}
+            magic={this.state.magic}
+            difficulty={this.state.difficulty}
             hp={this.state.hp}
             hpRegen={this.state.hpRegen}
             mp={this.state.mp}

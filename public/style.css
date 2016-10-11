@@ -231,6 +231,13 @@ body {
   text-decoration: none;
 }
 
+.statBars {
+  margin: 0px auto;
+  width: 50%;
+  text-align: center;
+}
+
+
  /*Random*/
 
  .lineBreak {
