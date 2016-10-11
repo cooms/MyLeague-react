@@ -12,7 +12,8 @@ export default React.createClass({
   },
 
   componentDidMount () {
-    ChampApi.getChamp(this.props.params.name, this.renderResults).scrollTop = 0;
+    ChampApi.getChamp(this.props.params.name, this.renderResults)
+    window.scrollTo(0, 80)
   },
 
   renderResults (err, champData) {
