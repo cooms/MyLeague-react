@@ -12,7 +12,7 @@ export default React.createClass({
   },
 
   componentDidMount () {
-    ChampApi.getChamp(this.props.params.name, this.renderResults)
+    ChampApi.getChamp(this.props.params.name, this.renderResults).scrollTop = 0;
   },
 
   renderResults (err, champData) {
