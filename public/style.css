@@ -47,6 +47,20 @@ body {
 	background-image: url('images/main_bg.jpg');
 }
 
+.formBoxWrapper {
+	margin: 100px auto;
+	max-width: 960px;
+	height: auto;
+
+	border: 1px solid grey;
+	border-radius: 5px;
+
+	background-color: rgba(0, 0, 0, .55);
+
+	color: white;
+	font-family: Raleway;
+}
+
 #indexWrapper {
 	font-size: 1.6em;
 	text-align: center;

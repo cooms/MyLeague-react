@@ -3,7 +3,7 @@ import React from 'react'
 export default React.createClass({
   render() {
     return (
-      <div className="contentWrapper" id="indexWrapper">
+      <div className="formBoxWrapper" id="indexWrapper">
   			 <form method="post" id="inputForm">
   				 <label htmlFor="name"> What's your name? </label>
   				 <br/>
