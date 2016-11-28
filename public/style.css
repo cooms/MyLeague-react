@@ -125,7 +125,8 @@ body {
 .contentWrapper {
 	margin: 100px auto;
 	max-width: 960px;
-	height: 1090px;
+	min-height: 1250px;
+	height: auto;
 
 	border: 1px solid grey;
 	border-radius: 5px;
