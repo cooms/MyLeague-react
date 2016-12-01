@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router'
 
+// Render the entire list of champions - map an image, id and link for each one.
 export default React.createClass({
   render () {
     return (

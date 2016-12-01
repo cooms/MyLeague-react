@@ -5,6 +5,7 @@ import {Router, Route, hashHistory} from 'react-router'
 import App from './components/App'
 import ChampionInfo from './components/ChampionInfo'
 
+// Set react router
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <Router history={hashHistory}>

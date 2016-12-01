@@ -5,12 +5,14 @@ export default {
   GetAllChamps: GetAllChamps
 }
 
+// Main JSON file sliced apart to allow other urls to be appended to it, this allows images to fetched from other sources
 var mainURL = "http://ddragon.leagueoflegends.com/cdn/"
 var mainJSON = "6.20.1/data/en_US/champion.json"
 var tallImagePath = "img/champion/loading/"
 var splashImagePath = "img/champion/splash/"
 var profImagePath = "6.20.1/img/champion/"
 
+// Retrieve a specific champion's details using a callback
 function getChamp (name, cb) {
   request
     .get(mainURL + mainJSON)
@@ -47,7 +49,6 @@ function getChamp (name, cb) {
             moveSpeed: expectedChamp.stats.movespeed
           }
         }
-        console.log(champData)
         cb(null, champData)
       } else {
         cb(err)
@@ -55,6 +56,7 @@ function getChamp (name, cb) {
     })
 }
 
+// Retrieve all champions
 function GetAllChamps (cb) {
   request
     .get(mainURL + mainJSON)

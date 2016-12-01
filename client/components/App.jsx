@@ -4,6 +4,7 @@ import Formbox from './FormBox.jsx'
 import ChampList from './ChampList.jsx'
 import ChampApi from './ChampApi.js'
 
+// Render initial state with specified components
 export default React.createClass({
   getInitialState () {
     return {

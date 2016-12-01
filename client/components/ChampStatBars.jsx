@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Render champions main statistical information
 export default React.createClass({
   render(){
     return(

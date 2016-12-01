@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Render additional statistical information
 export default React.createClass({
   render(){
     return(

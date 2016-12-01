@@ -1,5 +1,6 @@
 import React from 'react'
 
+// IN DEVELOPMENT - Render the form box for champion matching
 export default React.createClass({
   render() {
     return (

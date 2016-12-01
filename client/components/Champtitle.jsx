@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Render the champion's title
 export default React.createClass({
   render () {
     return (
