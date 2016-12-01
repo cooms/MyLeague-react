@@ -9,7 +9,6 @@ MyLeague-react currently makes use of the following dependencies:
 * react router
 * webpack
 * babel
-and more
 
 I'm currently looking at omitting the form box for now, and adding more information into the specific champions' information. This includes:
 * Splash art of the specific champion as the `background-image`
