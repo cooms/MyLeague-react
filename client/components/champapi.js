@@ -15,14 +15,14 @@ var profImagePath = "6.20.1/img/champion/"
 // Retrieve a specific champion's details using a callback
 function getChamp (name, cb) {
   request
-    .get(mainURL + mainJSON)
+    .get(mainURL + "6.20.1/data/en_US/champion/" + name + ".json")
     .end((err, res) => {
       let expectedChamp = res.body.data[name]
       if(!err) {
         const champData = {
           champName: expectedChamp.name,
           epiphet: expectedChamp.title,
-          blurb: expectedChamp.blurb,
+          blurb: expectedChamp.lore,
           roles: {
             role1: expectedChamp.tags[0],
             role2: expectedChamp.tags[1]
