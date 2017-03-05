@@ -1,9 +1,11 @@
 import React from 'react'
+import ChampApi from './ChampApi'
 import Champtitle from './ChampTitle.jsx'
+import ChampRoles from './ChampRoles.jsx'
 import ChampStatBars from './ChampStatBars.jsx'
 import Champstats from './ChampStats.jsx'
 import Champbio from './ChampBio.jsx'
-import ChampApi from './ChampApi'
+
 
 export default React.createClass({
   getInitialState () {
@@ -38,7 +40,9 @@ export default React.createClass({
       moveSpeed: champData.stats.moveSpeed,
       tallImage: champData.tallImage,
       splashImage: champData.splashIamge,
-      profImage: champData.profImage
+      profImage: champData.profImage,
+      role1: champData.roles.role1,
+      role2: champData.roles.role2
     })
   },
 
@@ -50,6 +54,10 @@ export default React.createClass({
           <Champtitle
             name={this.state.name}
             epiphet={this.state.epiphet}
+          />
+          <ChampRoles
+            role1={this.state.role1}
+            role2={this.state.role2}
           />
           <ChampStatBars
             attack={this.state.attack}
